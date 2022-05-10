@@ -1,7 +1,7 @@
 {
   "name": "toggle-section",
   "main": "./lib/toggle-section",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Generate a toggle section for inkdrop",
   "keywords": [
     "toggle",
