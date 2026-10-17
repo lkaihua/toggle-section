@@ -1,0 +1,68 @@
+.toggle-section-details {
+  border: 1px solid transparent;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  transition: border-color 0.2s ease;
+
+  /* Indent the entire container to keep nested items bounded */
+  padding-left: 1.75rem;
+  padding-right: 0.5rem;
+
+  summary {
+    /* Pull the summary out to overlap the container's left/right padding */
+    margin-left: -1.75rem;
+    margin-right: -0.5rem;
+    padding: 0.25rem 0.5rem 0.25rem 0.75rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center; /* Ensures the arrow centers with the heading text */
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s ease;
+
+    /* Hide default marker */
+    list-style: none;
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    /* Custom animated marker */
+    &::before {
+      content: "▶";
+      font-size: 0.65em;
+      margin-right: 0.6rem;
+      color: var(--text-muted, #6b7280);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    &:hover {
+      background-color: var(--hover-bg, rgba(0, 0, 0, 0.04));
+    }
+
+    /* Keep heading styles intact but remove margins for flexbox alignment */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 0;
+      /* Removed font-size restriction so it uses your default markdown sizes */
+    }
+  }
+}
+
+.toggle-section-details[open] {
+  border-color: var(--border-color, #e5e7eb);
+  background-color: var(--bg-color, transparent);
+
+  & > summary {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-bottom: 0.25rem;
+
+    &::before {
+      transform: rotate(90deg);
+    }
+  }
+}
