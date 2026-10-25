@@ -1,10 +1,13 @@
 {
   "name": "toggle-section",
   "main": "./lib/index",
-  "version": "0.3.0",
-  "description": "Generate a toggle section for inkdrop",
+  "version": "0.3.1",
+  "description": "Section folding in Preview panel for Inkdrop",
   "keywords": [
     "toggle",
+    "section",
+    "fold",
+    "plugin",
     "inkdrop",
     "markdown"
   ],
