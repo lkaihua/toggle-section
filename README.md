@@ -1,35 +1,47 @@
 ## Toggle Section
 
-This plugin enables you to create toggle sections.
+Section folding in Preview panel. This transforms a +/- leading header markdown section into a `<details>` HTML element in Preview panel. Especially useful to keep details folded in a tidy manner.
 
-- Insert a prefix plus sign `+` in any section header to create a toggle section.
+![Example: Markdown grammer and Preview panel](toggle-section.jpg)
 
-    ```markdown
-    ### + Toggle Heading
-    Content
-    * Item One
-    * Item Two
-    ```
+- Insert a prefix `-` in any section to keep it unfolded
 
-- You can insert a prefix minus sign `-` instead and the new toggle section is open.
+  ```markdown
+  ## - Unfolded
 
-    ```markdown
-    ### - Toggle Heading (open)
-    Content
-    * Item One
-    * Item Two
-    ```
+  Content
 
-- Support multi-layer toggle sections
+  - Item One
+  - Item Two
+  ```
 
-    ```markdown
-    ### - Title h3
-    Content
-    #### + Sub Title
-    Content 1
-    #### - Sub Title 2
-    Content 2
-    ```
+- Or isert a prefix`+` for a folded section
 
-![toggle-section.jpg](toggle-section.jpg)
+  ```markdown
+  ## + Folded
 
+  Content
+
+  - Item One
+  - Item Two
+  ```
+
+- It spports multi-layer sections
+
+  ```markdown
+  ## - Title
+
+  Summary
+
+  ### - Sub Title A
+
+  Paragraph A
+
+  ### - Sub Title B
+
+  Paragraph B
+
+  ### + Appendix (folded)
+
+  Appendix Content
+  ```
